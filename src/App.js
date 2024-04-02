@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback } from "react";
+
+import Header from "./components/header/Header";
+import Nav from "./components/navPanel/Nav";
+
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+
+import { particlesOptions } from "./utils/config";
+
+import "./App.css";
 
 function App() {
+  //#region particlejs configuration
+  //eslint-disable-next-line
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
+  //eslint-disable-next-line
+  const particlesLoaded = useCallback(async (container) => {
+    // await console.log(container);
+  }, []);
+
+  //#endregion
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className="fixed inset-0 z-0"
+        options={particlesOptions}
+      />
+      <Header />
+      <Nav />
     </div>
   );
 }
