@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import { navMenuItems, navMenuIcons } from "../../utils/data";
+import { navMenuItems } from "../../utils/data";
 
 import "./Nav.css";
-import { MdMailOutline } from "react-icons/md";
 
 function Nav() {
   const [activeNav, setActiveNav] = useState("#");
@@ -45,31 +44,36 @@ function Nav() {
   return (
     <div className="nav">
       <nav className="navList">
-        {navMenuIcons.map((navMenuIcon, idx) => (
+        {navMenuItems.map((item) => (
           <a
-            key={navMenuItems[idx]}
+            key={item["name"]}
             className={
-              navMenuItems[idx] === "Contact"
-                ? "navMenuIcon navContactIcon"
+              activeNav.toLowerCase() === "#" + item["name"].toLowerCase() &&
+              item["name"] !== "Contact"
+                ? "navMenuIcon navActive"
+                : activeNav.toLowerCase() === "#" && item["name"] === "Home"
+                ? "navMenuIcon navActive"
+                : item["name"] === "Contact"
+                ? "navContactIcon"
                 : "navMenuIcon"
             }
             href={
-              navMenuItems[idx] === "Home"
-                ? "#"
-                : "#" + navMenuItems[idx].toLowerCase()
+              item["name"] === "Home" ? "#" : "#" + item["name"].toLowerCase()
             }
             onClick={() =>
-              triggerNav(
-                navMenuItems[idx] === "Home" ? "#" : "#" + navMenuItems[idx]
-              )
+              triggerNav(item["name"] === "Home" ? "#" : "#" + item["name"])
             }
           >
-            {navMenuIcon}
+            {item["icon"]}
           </a>
         ))}
       </nav>
-      <a href="#contact" onClick={() => triggerNav("#contact")}>
-        <MdMailOutline />
+      <a
+        className="navContactIconSm"
+        href="#contact"
+        onClick={() => triggerNav("#contact")}
+      >
+        {navMenuItems[navMenuItems.length - 1]["icon"]}
       </a>
     </div>
   );

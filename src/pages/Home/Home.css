@@ -1,0 +1,55 @@
+.home {
+  @apply h-screen w-full pt-12 md:pt-28 px-12 flex flex-col md:flex-row justify-center items-center md:gap-x-24 gap-y-8;
+}
+
+.homeDescription {
+  @apply md:flex-[0.4] mb-12 md:mb-28 order-2 md:order-1 flex flex-col items-center md:items-end md:gap-y-6;
+}
+
+.homeDescriptionName {
+  @apply text-lightColor text-2xl md:text-3xl lg:text-4xl font-semibold md:order-1 order-2;
+}
+
+.homeDescriptionBreak {
+  @apply border-b-2 mt-4 mb-0 border-lightColor w-10 md:flex md:order-2 order-1 hidden md:visible;
+}
+
+.homeDescriptionHeading {
+  @apply text-base md:text-xl font-semibold tracking-[2px] pt-2 order-3;
+}
+
+.homeDescriptionButtons {
+  @apply order-4 flex justify-center items-center gap-x-6 md:pt-6 pt-8;
+}
+
+.homeDescriptionButton {
+  @apply text-lightColor md:text-base text-sm border border-primaryColor p-2 px-4 rounded-md;
+}
+
+.homeCvBtn {
+  @apply hover:bg-primaryColor text-primaryColor hover:text-white transition ease-in-out duration-150;
+}
+
+.homeIntroBtn {
+  @apply bg-primaryColor hover:text-primaryColor text-white hover:bg-white transition duration-150 ease-in-out;
+}
+
+.homeProfile {
+  @apply md:flex-[0.6] flex flex-col md:flex-row justify-center items-center md:justify-start md:gap-x-6 gap-y-4 order-1 md:order-2;
+}
+
+.homeProfileFrame {
+  @apply h-48 md:h-80 lg:h-96 md:mb-28 border-2 border-lightColor;
+}
+
+.homeProfilePic {
+  @apply h-full object-cover relative -translate-x-3 -translate-y-3 cursor-pointer hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out duration-500;
+}
+
+.homeSocialMedia {
+  @apply flex flex-row md:flex-col justify-center items-center gap-x-4 md:gap-y-4 md:mb-28;
+}
+
+.homeSocialMedia > a {
+  @apply text-3xl cursor-pointer text-primaryColor hover:text-primaryVariantColor transition ease-in-out duration-150;
+}
