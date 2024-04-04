@@ -1,5 +1,5 @@
 .header {
-  @apply h-20 px-12 flex justify-between items-center gap-[0.8rem] backdrop-blur-[15px] text-primaryVariantColor absolute top-0;
+  @apply h-20 px-12 flex justify-between items-center gap-[0.8rem] backdrop-blur-[15px] text-primaryVariantColor fixed top-0;
 }
 
 .headerInfo {

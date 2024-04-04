@@ -2,9 +2,15 @@ import React from "react";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import { socialMedia, myName, myDescription } from "../../utils/data";
+import {
+  socialMedia,
+  myName,
+  myDescription,
+  homeButton,
+} from "../../utils/data";
 import profilePic from "../../assets/images/home-profile-pic.jpeg";
 
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import "./Home.css";
 
 function Home() {
@@ -24,13 +30,18 @@ function Home() {
           {text}
           <Cursor cursorColor="text-primaryColor" />
         </p>
-        <div className="homeDescriptionButtons">
-          <button className="homeDescriptionButton homeCvBtn">
-            Download CV
-          </button>
-          <button className="homeDescriptionButton homeIntroBtn">
-            Intro. Video
-          </button>
+
+        <a
+          className="homeDescriptionButton"
+          href={homeButton["link"]}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {homeButton["name"]}
+        </a>
+        <div className="homeDescriptionMore">
+          <MdKeyboardDoubleArrowDown />
+          <a href="#about">Scroll Down</a>
         </div>
       </div>
       <div className="homeProfile">

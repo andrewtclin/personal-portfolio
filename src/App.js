@@ -3,6 +3,7 @@ import React, { useCallback } from "react";
 import Header from "./components/header/Header";
 import Nav from "./components/navPanel/Nav";
 import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -37,6 +38,7 @@ function App() {
       <Header />
       <Nav />
       <Home />
+      <About />
     </div>
   );
 }

@@ -1,0 +1,63 @@
+.about {
+  @apply h-screen w-full pt-20 md:pt-28 px-12 flex flex-col md:flex-row justify-center items-center;
+}
+
+.aboutLeft {
+  @apply flex-[0.6] w-full h-full flex flex-col justify-start items-start gap-y-12 text-justify;
+}
+
+.aboutLeftTitle {
+  @apply flex flex-col justify-start items-start;
+}
+
+.aboutLeftTitleSub {
+  @apply font-medium;
+}
+
+.aboutLeftTitleMain {
+  @apply tracking-[5px] text-3xl font-medium text-primaryColor;
+}
+
+.aboutLeftSummary {
+  @apply text-base;
+}
+
+.aboutLeftSocialGroups {
+  @apply flex justify-center items-center gap-x-12;
+}
+
+.aboutLeftSocialGroup {
+  @apply flex flex-col justify-center items-center bg-variant rounded-md p-8 w-36 shadow-md border border-gray-200 cursor-pointer hover:bg-transparent transition ease-in-out duration-150;
+}
+
+.aboutLeftSocialGroup > p {
+  @apply font-medium;
+}
+
+.aboutLeftSocialIcon {
+  @apply text-4xl;
+}
+
+.aboutLeftCVGroups {
+  @apply flex justify-center items-center gap-x-2;
+}
+
+.aboutLeftCVGroups > p {
+  @apply tracking-[2px];
+}
+
+.aboutLeftCV {
+  @apply p-2 text-center hover:scale-110 transition duration-100 ease-in-out font-medium  pr-4;
+}
+
+.aboutLeftCVBorder {
+  @apply border-r;
+}
+
+.aboutRight {
+  @apply flex-[0.4] w-full h-full mx-12 flex justify-center items-center pb-12;
+}
+
+.aboutRightPic {
+  @apply object-cover w-full h-auto rounded-[2rem] rotate-6 transition duration-[400] ease-in-out hover:rotate-0;
+}
