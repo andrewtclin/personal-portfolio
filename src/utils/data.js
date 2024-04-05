@@ -11,6 +11,7 @@ import {
   AiFillLinkedin,
   AiFillMediumSquare,
   AiFillGithub,
+  AiFillIdcard,
 } from "react-icons/ai";
 
 //#region Header
@@ -44,6 +45,11 @@ export const socialMedia = [
     icon: <AiFillGithub />,
     link: "https://github.com/andrewtclin/",
   },
+  {
+    name: "CV",
+    icon: <AiFillIdcard />,
+    link: "https://drive.google.com/file/d/16oDl6uHZiTqCTZ4N2gaJCpFiKgTQNqCO/view?usp=sharing",
+  },
 ];
 
 export const myName = "Ta-Chun Lin | TC.";
@@ -60,10 +66,10 @@ export const summary =
   "I am an AI/ML Engineer and Software Engineer with 5+ years of experience. In AI sector, I have created powerful industrial computer vision applications, which are now one of the most extensively used Industrial 4.0 solutions in Taiwan's AI-driven Industrial Automation landscape; In Software Engineering, I have participated in developing large complex ERP systems and applications for several Taiwan's Central Government Departments.";
 
 export const cvGroups = [
-  {
-    name: "English",
-    link: "https://drive.google.com/file/d/16oDl6uHZiTqCTZ4N2gaJCpFiKgTQNqCO/view?usp=sharing",
-  },
+  // {
+  //   name: "English",
+  //   link: "https://drive.google.com/file/d/16oDl6uHZiTqCTZ4N2gaJCpFiKgTQNqCO/view?usp=sharing",
+  // },
   {
     name: "Traditional Chinese",
     link: "https://drive.google.com/file/d/1dCNINJKG60k7q5Ymi1sbCJsaU2sXHHU6/view?usp=sharing",

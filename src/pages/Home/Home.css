@@ -1,5 +1,5 @@
 .home {
-  @apply h-screen w-full pt-12 md:pt-28 px-12 flex flex-col md:flex-row justify-center items-center md:gap-x-24 xl:gap-x-40 gap-y-8;
+  @apply h-screen w-full pt-12 md:pt-28 px-12 md:px-28 flex flex-col md:flex-row justify-center items-center md:gap-x-24 xl:gap-x-40 gap-y-8;
 }
 
 .homeDescription {

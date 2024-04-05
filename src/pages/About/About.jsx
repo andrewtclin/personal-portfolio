@@ -30,14 +30,10 @@ function About() {
           ))}
         </div>
         <div className="aboutLeftCVGroups">
-          <p>Download My CVs:</p>
+          <p>Mandarin CVs:</p>
           {cvGroups.map((cv, idx) => (
             <a
-              className={
-                idx === cvGroups.length - 1
-                  ? "aboutLeftCV"
-                  : "aboutLeftCV aboutLeftCVBorder"
-              }
+              className="aboutLeftCV"
               key={cv["name"]}
               href={cv["link"]}
               target="_blank"
