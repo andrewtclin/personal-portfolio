@@ -1,9 +1,9 @@
 .about {
-  @apply h-screen w-full pt-20 md:pt-28 px-12 md:px-28 flex flex-col lg:flex-row justify-center items-center;
+  @apply h-screen w-full p-20 px-12 md:px-28 flex flex-col lg:flex-row justify-center items-center;
 }
 
 .aboutLeft {
-  @apply mb-12 w-full h-full flex flex-col justify-start items-start gap-y-10  text-justify;
+  @apply w-full h-full flex flex-col justify-start items-start gap-y-6 md:gap-y-10 text-justify;
 }
 
 .aboutLeftTitle {
@@ -27,19 +27,19 @@
 }
 
 .aboutLeftSocialGroup {
-  @apply flex flex-col justify-center items-center bg-variant rounded-md p-6 w-28 shadow-md border border-gray-200 cursor-pointer hover:bg-transparent transition ease-in-out duration-150;
+  @apply flex flex-col justify-center items-center bg-variant rounded-md p-4 lg:p-6 w-24 lg:w-28 shadow-md border border-gray-200 cursor-pointer hover:bg-transparent transition ease-in-out duration-150;
 }
 
 .aboutLeftSocialGroup > p {
-  @apply font-medium text-base;
+  @apply font-medium text-sm lg:text-base;
 }
 
 .aboutLeftSocialIcon {
-  @apply text-4xl;
+  @apply text-3xl lg:text-4xl;
 }
 
 .aboutLeftCVGroups {
-  @apply w-full flex justify-center items-center lg:justify-start;
+  @apply w-full flex flex-col md:flex-row justify-center items-center lg:justify-start;
 }
 
 .aboutLeftCVGroups > p {
@@ -47,11 +47,11 @@
 }
 
 .aboutLeftCV {
-  @apply p-2 text-center hover:scale-110 transition duration-100 ease-in-out font-medium;
+  @apply p-1 lg:p-2 text-center hover:scale-110 transition duration-100 ease-in-out font-medium;
 }
 
 .aboutRight {
-  @apply mb-12 w-full h-full hidden lg:flex justify-center items-center;
+  @apply w-full h-full hidden lg:flex justify-center items-center;
 }
 
 .aboutRightPic {

@@ -1,0 +1,19 @@
+.education {
+  @apply h-screen w-full p-20 px-12 md:px-28 flex flex-col justify-start items-center gap-y-10;
+}
+
+.educationTitle {
+  @apply w-full flex flex-col justify-start items-center lg:items-start;
+}
+
+.educationTitleSub {
+  @apply font-medium;
+}
+
+.educationTitleMain {
+  @apply tracking-[5px] text-2xl lg:text-3xl font-medium text-primaryColor;
+}
+
+.educationGrid {
+  @apply w-full h-full;
+}

@@ -80,3 +80,23 @@ export const cvGroups = [
   },
 ];
 //#endregion
+
+//#region Education
+export const educationInfo = [
+  {
+    institution: "Queensland University of Technology (QUT)",
+    degree: "Master of IT, Computer Science",
+    GPA: "6.9/7.0",
+    Awards: [
+      "2x QUT Executive Dean's Commendation for Academic Excellence",
+      "QUT Best Research Paper Awards 2023 - The 4th Annual Conference on Research in IT Practice",
+    ],
+  },
+  {
+    institution: "The University of Queensland",
+    degree: "Bachelor of Science, Organic Chemistry",
+    GPA: "",
+    Awards: [],
+  },
+];
+//#endregion

@@ -6,7 +6,6 @@ import "./Nav.css";
 
 function Nav() {
   const [activeNav, setActiveNav] = useState("#");
-  console.log(activeNav);
 
   const triggerNav = (navItem) => setActiveNav(navItem);
 

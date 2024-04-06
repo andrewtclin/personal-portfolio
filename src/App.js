@@ -2,8 +2,9 @@ import React, { useCallback } from "react";
 
 import Header from "./components/header/Header";
 import Nav from "./components/navPanel/Nav";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Education from "./pages/education/Education";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -11,6 +12,8 @@ import { loadFull } from "tsparticles";
 import { particlesOptions } from "./utils/config";
 
 import "./App.css";
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-quartz.css";
 
 function App() {
   //#region particlejs configuration
@@ -39,6 +42,7 @@ function App() {
       <Nav />
       <Home />
       <About />
+      <Education />
     </div>
   );
 }
