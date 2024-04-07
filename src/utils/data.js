@@ -1,5 +1,8 @@
 import qutLogo from "../assets/images/qut_logo.jpg";
 import uqLogo from "../assets/images/uq_logo.png";
+import spingenceLogo from "../assets/images/spingence_logo.jpg";
+import ksiLogo from "../assets/images/ksi_logo.png";
+import jaLogo from "../assets/images/JAstudio_logo.png";
 
 import {
   MdWorkOutline,
@@ -102,6 +105,43 @@ export const educationInfo = [
     degree: "Bachelor of Science, Chemistry",
     Awards: [],
     date: "Feb. 2015 - Dec. 2017",
+  },
+];
+//#endregion
+
+//#region Experience
+export const workExperience = [
+  {
+    title: "Full Stack Engineer (Computer Vision & Software)",
+    company: "Spingence Technology",
+    company_logo: spingenceLogo,
+    date: "Oct. 2020 - Jan. 2023",
+    job_summary: [
+      "Automates Industrial Process with AI Defect Detection Models: Successfully used limited defective product samples to decrease missed detection rate by 50% and maximize product yield.",
+      "Model Training & Research: Responsible of testing and integrating SOTA models, including classification/ detection/ segmentation/ explainable AI.",
+      "Developed Innovative Image Storage Platform: Storing image hierarchically with varying user permissions, along with self-built image labelling tools with label formats. Processed images can be directly into AI trainer without using third-party labelling tool, acting as “one-stop solution”.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company: "Sinon Corporation, KSI Inc.",
+    company_logo: ksiLogo,
+    date: "Dec. 2018 - Sep. 2020",
+    job_summary: [
+      "Development of ERP Accounting Systems for Taiwan's Central Government: With .NET MVC framework, Add, Read, Update, Delete of large data using efficient and secure SQL Stored Procedure.",
+      "Development of Food Ordering Platform: Group Ordering functionality that integrates with POS machine.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company: "JAStudio Technology (Freelance Software Business)",
+    company_logo: jaLogo,
+    date: "Jan. 2019 - Jan. 2023",
+    job_summary: [
+      "Co-manages a Freelance Software Business: https://jastudio-tech.com/",
+      "ML-Related Projects: Customed trained ML models and integrated in developed software.",
+      "Software-Related Projects: Developed full-stack software for clients: ERP systems, desktop, web-based.",
+    ],
   },
 ];
 //#endregion

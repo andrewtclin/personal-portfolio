@@ -19,7 +19,7 @@
 }
 
 .educationCard {
-  @apply flex flex-col justify-center items-center bg-gradient-to-bl from-variant to-gray-200 p-[1.2rem] rounded-md transition duration-[400] ease-in-out hover:cursor-pointer hover:from-variant hover:to-variant;
+  @apply flex flex-col justify-center items-center bg-transparent border-2 hover:border shadow-md hover:shadow-sm border-variant p-[1.2rem] rounded-md transition duration-[400] ease-in-out hover:cursor-pointer;
 }
 
 .educationCardLogoFrame {
@@ -27,7 +27,7 @@
 }
 
 .educationCardLogo {
-  @apply w-20 h-auto object-contain;
+  @apply w-16 md:w-20 h-auto object-contain;
 }
 
 .educationCardDegree {
@@ -43,7 +43,7 @@
 }
 
 .educationAwards {
-  @apply flex flex-col justify-center items-center bg-variant px-4 pb-2 w-full rounded-md bg-gradient-to-bl from-variant to-gray-200 cursor-pointer hover:from-variant hover:to-variant;
+  @apply flex flex-col justify-center items-center bg-transparent border-2 hover:border shadow-sm border-variant px-2 pb-2 w-full rounded-md cursor-pointer;
 }
 
 .educationAwardsTitle {
@@ -51,5 +51,5 @@
 }
 
 .educationAward {
-  @apply text-sm md:text-base text-justify;
+  @apply text-sm md:text-base;
 }
