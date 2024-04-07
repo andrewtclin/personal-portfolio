@@ -14,6 +14,42 @@
   @apply tracking-[5px] text-2xl lg:text-3xl font-medium text-primaryColor;
 }
 
-.educationGrid {
-  @apply w-full h-full;
+.educationCards {
+  @apply w-full flex justify-center items-center;
+}
+
+.educationCard {
+  @apply flex flex-col justify-center items-center bg-gradient-to-bl from-variant to-gray-200 p-[1.2rem] rounded-md transition duration-[400] ease-in-out hover:cursor-pointer hover:from-variant hover:to-variant;
+}
+
+.educationCardLogoFrame {
+  @apply overflow-hidden flex justify-center items-center;
+}
+
+.educationCardLogo {
+  @apply w-20 h-auto object-contain;
+}
+
+.educationCardDegree {
+  @apply text-base font-medium md:text-lg text-center py-1 md:py-4;
+}
+
+.educationCardInstitution {
+  @apply text-sm md:text-base text-center pb-1 md:pb-4;
+}
+
+.educationCardDate {
+  @apply text-primaryVariantColor flex justify-center items-center;
+}
+
+.educationAwards {
+  @apply flex flex-col justify-center items-center bg-variant px-4 pb-2 w-full rounded-md bg-gradient-to-bl from-variant to-gray-200 cursor-pointer hover:from-variant hover:to-variant;
+}
+
+.educationAwardsTitle {
+  @apply w-full pt-1 font-medium flex justify-center items-center text-primaryVariantColor;
+}
+
+.educationAward {
+  @apply text-sm md:text-base text-justify;
 }

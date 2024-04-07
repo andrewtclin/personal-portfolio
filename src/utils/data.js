@@ -1,3 +1,6 @@
+import qutLogo from "../assets/images/qut_logo.jpg";
+import uqLogo from "../assets/images/uq_logo.png";
+
 import {
   MdWorkOutline,
   MdOutlineSchool,
@@ -84,19 +87,21 @@ export const cvGroups = [
 //#region Education
 export const educationInfo = [
   {
-    institution: "Queensland University of Technology (QUT)",
+    institution: "Queensland University of Technology",
+    logo: qutLogo,
     degree: "Master of IT, Computer Science",
-    GPA: "6.9/7.0",
     Awards: [
-      "2x QUT Executive Dean's Commendation for Academic Excellence",
-      "QUT Best Research Paper Awards 2023 - The 4th Annual Conference on Research in IT Practice",
+      "2x QUT Executive Dean's Commendation for Academic Excellence (GPA: 6.9/7.0, 99%)",
+      "QUT Best Research Paper Awards 2023",
     ],
+    date: "Feb. 2023 - Jun. 2024",
   },
   {
     institution: "The University of Queensland",
-    degree: "Bachelor of Science, Organic Chemistry",
-    GPA: "",
+    logo: uqLogo,
+    degree: "Bachelor of Science, Chemistry",
     Awards: [],
+    date: "Feb. 2015 - Dec. 2017",
   },
 ];
 //#endregion

@@ -12,6 +12,8 @@ import { loadFull } from "tsparticles";
 import { particlesOptions } from "./utils/config";
 
 import "./App.css";
+import "swiper/css";
+import "swiper/css/pagination";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
