@@ -1,5 +1,7 @@
 import React from "react";
 
+import PageTitle from "../../components/pageTitle/PageTitle";
+
 import { summary, socialMedia, cvGroups } from "../../utils/data";
 
 import aboutPic from "../../assets/images/about-pic.jpg";
@@ -10,10 +12,7 @@ function About() {
   return (
     <section id="about" className="about">
       <div className="aboutLeft">
-        <div className="aboutLeftTitle">
-          <p className="aboutLeftTitleSub">Know More</p>
-          <p className="aboutLeftTitleMain">About Me</p>
-        </div>
+        <PageTitle title="About Me" description="Know More" />
         <p className="aboutLeftSummary">{summary}</p>
         <div className="aboutLeftSocialGroups">
           {socialMedia.map((item) => (

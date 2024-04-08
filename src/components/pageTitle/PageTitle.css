@@ -1,0 +1,11 @@
+.pageTitle {
+  @apply w-full flex flex-col justify-start items-center lg:items-start;
+}
+
+.pageTitleSub {
+  @apply font-medium;
+}
+
+.pageTitleMain {
+  @apply tracking-[5px] text-2xl lg:text-3xl font-medium text-primaryColor;
+}

@@ -1,4 +1,7 @@
 import React from "react";
+
+import PageTitle from "../../components/pageTitle/PageTitle";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -8,11 +11,8 @@ import "./Experience.css";
 
 function Experience() {
   return (
-    <div className="experience">
-      <div className="experienceTitle">
-        <p className="experienceTitleSub">Professional Work</p>
-        <p className="experienceTitleMain">Experience</p>
-      </div>
+    <section id="experience" className="experience">
+      <PageTitle title="Experience" description="Professional Work" />
       <Swiper
         className="experienceCards"
         pagination={{
@@ -60,7 +60,7 @@ function Experience() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+    </section>
   );
 }
 

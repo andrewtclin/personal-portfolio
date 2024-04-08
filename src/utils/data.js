@@ -145,3 +145,54 @@ export const workExperience = [
   },
 ];
 //#endregion
+
+//#region Skills
+export const skills = [
+  {
+    category: "Domains",
+    skills: [
+      "Machine Learning",
+      "Deep Learning",
+      "Data Science",
+      "Software Engineering",
+    ],
+  },
+  {
+    category: "Frameworks",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "LangChain",
+      "ReactJS",
+      "Vue",
+      "Angular",
+      ".NET",
+      "Flask",
+      "Django",
+      "NodeJS",
+    ],
+  },
+  {
+    category: "Programming Languages",
+    skills: ["Python", "C#", "Java", "C++", "JavaScript"],
+  },
+  {
+    category: "MLOps & DevOps",
+    skills: [
+      "HuggingFace",
+      "MLFlow",
+      "Azure",
+      "AWS",
+      "Gitlab/GitHub",
+      "Docker",
+      "Kubernetes",
+    ],
+  },
+  { category: "Databases", skills: ["MSSQL", "MongoDB", "Reddis"] },
+  { category: "Languages", skills: ["English (Native)", "Mandarin (Native)"] },
+  {
+    category: "Certificates",
+    skills: ["Neural Networks and Deep Learning (Credential ID: VF8UQ63ZUNFW)"],
+  },
+];
+//#endregion

@@ -1,0 +1,7 @@
+.skills {
+  @apply h-screen w-full p-20 px-12 md:px-28;
+}
+
+.skillsGrid {
+  @apply my-8 md:my-16 h-[90%] w-full;
+}

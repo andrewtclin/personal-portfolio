@@ -1,3 +1,4 @@
+import PageTitle from "../../components/pageTitle/PageTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -8,10 +9,7 @@ import "./Education.css";
 function Education() {
   return (
     <section id="education" className="education">
-      <div className="educationTitle">
-        <p className="educationTitleSub">My background</p>
-        <p className="educationTitleMain">Education</p>
-      </div>
+      <PageTitle title="Education" description="My Background" />
       <Swiper
         className="educationCards"
         pagination={{
