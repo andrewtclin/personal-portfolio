@@ -28,8 +28,8 @@ function Education() {
           },
         }}
         style={{
-          "--swiper-pagination-bullet-inactive-color": "rgb(107 114 128)",
-          "--swiper-theme-color": "rgb(107 114 128)",
+          "--swiper-pagination-bullet-inactive-color": "#D4613C",
+          "--swiper-theme-color": "#D4613C",
         }}
       >
         {educationInfo.map((info) => (

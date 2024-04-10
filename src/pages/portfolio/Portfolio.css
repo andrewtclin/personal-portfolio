@@ -1,0 +1,52 @@
+.portfolio {
+  @apply w-full p-20 px-12 md:px-28 flex flex-col justify-start items-center gap-y-10;
+}
+
+.portfolioCards {
+  @apply w-full h-full container pb-6 -mt-6 md:mt-0;
+}
+
+.portfolioCard {
+  @apply flex flex-col justify-center items-center bg-transparent border-2 hover:border shadow-md hover:shadow-sm border-variant p-[1.2rem] rounded-md transition duration-[400] ease-in-out hover:cursor-pointer;
+}
+
+.portfolioCardLogoFrame {
+  @apply overflow-hidden flex justify-center items-center;
+}
+
+.portfolioCardLogo {
+  @apply h-28 md:h-40 w-auto object-contain;
+}
+
+.portfolioInfo {
+  @apply grid grid-cols-1 gap-y-2 my-6 place-items-center;
+}
+
+.portfolioInfoTitle {
+  @apply text-base md:text-lg font-semibold text-center border-b-4;
+}
+
+.portfolioInfoType {
+  @apply text-sm text-center font-normal;
+}
+
+.portfolioInfoDescription {
+  @apply flex justify-center items-center text-sm md:text-base text-center font-normal h-28 pt-4 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#9A4E40]/20 pr-4;
+}
+
+.portfolioWorkLinks {
+  @apply flex gap-4 mb-4 justify-center items-center;
+}
+
+.portfolioWorkLink {
+  @apply w-max inline-block py-3 px-[1.2rem] rounded-[0.4rem] text-gray-500
+        cursor-pointer border-[1px] border-solid border-primaryColor transition duration-[400] ease-in-out;
+}
+
+.portfolioWorkLink:hover {
+  @apply bg-transparent text-primaryVariantColor border-primaryVariantColor;
+}
+
+.portfolioWorkLinkPrimary {
+  @apply bg-primaryColor text-baseColor;
+}

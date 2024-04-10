@@ -1,5 +1,5 @@
 .about {
-  @apply h-screen w-full p-20 px-12 md:px-28 flex flex-col lg:flex-row justify-center items-center;
+  @apply w-full p-20 px-12 md:px-28 flex flex-col lg:flex-row justify-center items-center;
 }
 
 .aboutLeft {

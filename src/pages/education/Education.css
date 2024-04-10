@@ -1,5 +1,5 @@
 .education {
-  @apply h-screen w-full p-20 px-12 md:px-28 flex flex-col justify-start items-center gap-y-10;
+  @apply w-full p-20 px-12 md:px-28 flex flex-col justify-start items-center gap-y-10;
 }
 
 .educationTitle {
