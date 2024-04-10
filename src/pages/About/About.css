@@ -3,7 +3,7 @@
 }
 
 .aboutLeft {
-  @apply w-full h-full flex flex-col justify-start items-start gap-y-6 md:gap-y-10 text-justify;
+  @apply w-full h-full flex flex-col justify-start items-start gap-y-6 md:gap-y-10 text-justify mr-0 lg:pr-12;
 }
 
 .aboutLeftTitle {
@@ -51,11 +51,11 @@
 }
 
 .aboutRight {
-  @apply w-full h-full hidden lg:flex justify-center items-center;
+  @apply w-[50%] hidden lg:flex justify-center items-center aspect-square rounded-[2rem] bg-gradient-to-b from-transparent via-primaryColor to-transparent;
 }
 
 .aboutRightPic {
-  @apply object-cover relative -mr-28 xl:-mr-0 lg:h-96 xl:h-[80%] rounded-[2rem] rotate-6 transition duration-[400] ease-in-out hover:rotate-0;
+  @apply overflow-hidden object-cover relative rounded-[2rem] rotate-6 transition duration-[400] ease-in-out hover:rotate-0;
 }
 
 /*

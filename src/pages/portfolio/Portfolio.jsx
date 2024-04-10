@@ -12,7 +12,7 @@ import "./Portfolio.css";
 
 function Portfolio() {
   return (
-    <section id="portfolio" className="portfolio">
+    <section id="projects" className="portfolio">
       <PageTitle title="Portfolio" description="My works in AI, ML, Software" />
       <Swiper
         className="portfolioCards"

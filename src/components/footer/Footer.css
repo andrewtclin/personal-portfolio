@@ -1,0 +1,51 @@
+.footer {
+  @apply bg-primaryColor py-2 px-0 text-center text-base mt-28 text-variant flex flex-col justify-center items-center gap-y-4;
+}
+
+.footerSocialIcons {
+  @apply flex justify-center items-center gap-x-6 border-b pb-3;
+}
+
+.footerSocialIcons > a {
+  @apply text-3xl lg:text-4xl hover:text-primaryVariantColor hover:-translate-y-0.5 transition ease-in-out duration-150;
+}
+
+.footerContact {
+  @apply border border-variant p-1 px-3 rounded-md text-sm md:text-base hover:bg-variant hover:text-primaryVariantColor hover:border-primaryVariantColor cursor-pointer transition ease-in-out duration-150;
+}
+
+.footerDialogContainer {
+  @apply fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 text-primaryVariantColor backdrop-blur-sm bg-primaryVariantColor bg-opacity-10;
+}
+
+.footerDialog {
+  @apply w-[80%] md:w-[60%] bg-white p-4 rounded-lg;
+}
+
+.footerDialogTitle {
+  @apply text-lg font-bold mb-4;
+}
+
+.footerDialogContent {
+  @apply grid grid-cols-[1fr] lg:gap-[12%];
+}
+
+.footerDialogForm {
+  @apply flex flex-col gap-5;
+}
+
+.footerContactInput {
+  @apply w-full p-2 md:p-4 rounded-lg bg-transparent border-2 border-solid border-primaryVariantColor resize-none text-primaryColor;
+}
+
+.footerDialogCloseButton {
+  @apply text-sm md:text-base mt-4 bg-primaryColor text-variant hover:bg-variant hover:text-primaryVariantColor hover:border hover:border-primaryVariantColor px-4 py-2 rounded transition ease-in-out duration-150;
+}
+
+.footerContactSendButtonContainer {
+  @apply flex justify-center items-center border-b pb-4;
+}
+
+.footerContactSendButton {
+  @apply text-sm md:text-base text-primaryVariantColor border border-primaryVariantColor rounded-md p-2 px-4 hover:bg-primaryVariantColor hover:text-variant transition ease-in-out duration-150;
+}

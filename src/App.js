@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 
 import Header from "./components/header/Header";
 import Nav from "./components/navPanel/Nav";
+import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Education from "./pages/education/Education";
@@ -49,8 +50,9 @@ function App() {
       <About />
       <Education />
       <Experience />
-      <Skills />
       <Portfolio />
+      <Skills />
+      <Footer />
     </div>
   );
 }

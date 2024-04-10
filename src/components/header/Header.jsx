@@ -8,7 +8,7 @@ import "./Header.css";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <div className="headerInfo">
         <img
           className="headerInfoAvatar"
@@ -17,7 +17,7 @@ function Header() {
         />
         <p className="headerInfoName">{headerInfoName}</p>
       </div>
-    </div>
+    </header>
   );
 }
 

@@ -395,3 +395,7 @@ export const portfolioWorks = [
   },
 ];
 //#endregion
+
+//#region Footer
+export const emailAddress = "chuntcdj@gmail.com";
+//#endregion
