@@ -33,6 +33,7 @@ function Experience() {
         style={{
           "--swiper-pagination-bullet-inactive-color": "#D4613C",
           "--swiper-theme-color": "#D4613C",
+          padding: "0 0 25px 0",
         }}
       >
         {workExperience.map((info) => (
@@ -60,6 +61,9 @@ function Experience() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <p className="experienceProjectText">
+        View CV for <span>Professional Projects</span>
+      </p>
     </section>
   );
 }

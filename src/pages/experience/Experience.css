@@ -3,7 +3,7 @@
 }
 
 .experienceCards {
-  @apply w-full h-full container pb-6 -mt-6 md:mt-0;
+  @apply w-full h-full container -mt-6 md:mt-0;
 }
 
 .experienceCard {
@@ -15,7 +15,7 @@
 }
 
 .experienceCardLogo {
-  @apply w-16 md:w-20 h-auto object-contain;
+  @apply h-16 md:h-20 w-auto object-contain;
 }
 
 .experienceCardTitle {
@@ -36,4 +36,12 @@
 
 .experienceCardSummaryInfo {
   @apply py-2 pr-2 text-justify text-sm md:text-base;
+}
+
+.experienceProjectText {
+  @apply -mt-10 text-sm font-semibold;
+}
+
+.experienceProjectText > span {
+  @apply underline;
 }

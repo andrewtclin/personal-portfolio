@@ -9,6 +9,7 @@ import Education from "./pages/education/Education";
 import Experience from "./pages/experience/Experience";
 import Skills from "./pages/skills/Skills";
 import Portfolio from "./pages/portfolio/Portfolio";
+import Blogs from "./pages/blogs/Blogs";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -52,6 +53,7 @@ function App() {
       <Experience />
       <Portfolio />
       <Skills />
+      <Blogs />
       <Footer />
     </div>
   );

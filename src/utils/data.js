@@ -144,7 +144,7 @@ export const workExperience = [
   },
   {
     title: "Software Engineer",
-    company: "Sinon Corporation, KSI Inc.",
+    company: "Sinon Corporation Business Groups, KSI Inc.",
     company_logo: ksiLogo,
     date: "Dec. 2018 - Sep. 2020",
     job_summary: [

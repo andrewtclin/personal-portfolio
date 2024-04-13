@@ -18,7 +18,7 @@ function Footer() {
   };
 
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footerSocialIcons">
         {socialMedia?.map((social) => (
           <a

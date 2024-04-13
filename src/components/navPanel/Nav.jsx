@@ -6,8 +6,16 @@ import "./Nav.css";
 
 function Nav() {
   const [activeNav, setActiveNav] = useState("#");
+  const [isBottom, setIsBottom] = useState(false);
 
   const triggerNav = (navItem) => setActiveNav(navItem);
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,6 +26,7 @@ function Nav() {
             if (id === "skills") {
               id = "portfolio";
             }
+
             setActiveNav("#" + id);
             window.history.replaceState(null, null, "#" + id);
           }
@@ -28,6 +37,25 @@ function Nav() {
       }
     );
 
+    const handleFooterIntersect = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsBottom(true);
+        } else {
+          setIsBottom(false);
+        }
+      });
+    };
+    const footer = document.getElementById("footer");
+    if (footer) {
+      var footerObserver = new IntersectionObserver(handleFooterIntersect, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Adjust as needed
+      });
+      footerObserver.observe(footer);
+    }
+
     const sections = document.querySelectorAll("section, header");
     sections.forEach((section) => {
       observer.observe(section);
@@ -37,12 +65,15 @@ function Nav() {
       sections.forEach((section) => {
         observer.unobserve(section);
       });
+      if (footer) {
+        footerObserver.disconnect();
+      }
     };
   }, []);
 
   return (
     <div className="nav">
-      <nav className="navList">
+      <nav className={`navList ${isBottom ? "navListOffset" : ""}`}>
         {navMenuItems.map((item) => (
           <a
             key={item["name"]}
@@ -59,8 +90,13 @@ function Nav() {
             href={
               item["name"] === "Home" ? "#" : "#" + item["name"].toLowerCase()
             }
-            onClick={() =>
-              triggerNav(item["name"] === "Home" ? "#" : "#" + item["name"])
+            onClick={
+              item["name"] === "Contact"
+                ? () => scrollToBottom()
+                : () =>
+                    triggerNav(
+                      item["name"] === "Home" ? "#" : "#" + item["name"]
+                    )
             }
           >
             {item["icon"]}
@@ -70,7 +106,7 @@ function Nav() {
       <a
         className="navContactIconSm"
         href="#contact"
-        onClick={() => triggerNav("#contact")}
+        onClick={() => scrollToBottom()}
       >
         {navMenuItems[navMenuItems.length - 1]["icon"]}
       </a>
