@@ -1,3 +1,64 @@
 .blogs {
-  @apply w-full p-20 px-12 md:px-28;
+  @apply w-full p-20 px-12 md:px-28 flex flex-col justify-start items-center gap-y-10;
+}
+
+.blogsContainer {
+  @apply w-full h-full flex flex-col gap-y-2 justify-center items-center text-justify;
+}
+
+.blogsContainerTitle {
+  @apply text-sm md:text-base font-semibold border-b;
+}
+
+.blogsFilterInput {
+  @apply w-44 border rounded-sm px-2 focus:outline-none;
+}
+
+.blogsCards {
+  @apply w-full h-full container pb-6 -mt-6 md:mt-0;
+}
+
+.blogsCard {
+  @apply flex flex-col justify-center items-center bg-transparent border-2 hover:border shadow-md hover:shadow-sm border-variant p-[1.2rem] rounded-md transition duration-[400] ease-in-out hover:cursor-pointer;
+}
+
+.blogsArticleThumbnailFrame {
+  @apply overflow-hidden flex justify-center items-center;
+}
+
+.blogsArticleThumbnail {
+  @apply h-28 md:h-40 w-auto object-contain;
+}
+
+.blogsArticle {
+  @apply grid grid-cols-1 gap-y-2 place-items-center;
+}
+
+.blogsArticleTitle {
+  @apply text-base font-semibold text-center;
+}
+
+.blogsArticleDescription {
+  @apply h-20 flex justify-center items-center text-sm text-center font-normal;
+}
+
+.articleLinkContainer {
+  @apply flex gap-4 justify-center items-center;
+}
+
+.articleLink {
+  @apply text-3xl w-max inline-block py-3 px-[1.2rem] rounded-[0.4rem] text-gray-500
+        cursor-pointer transition duration-[400] ease-in-out;
+}
+
+.articleLink:hover {
+  @apply bg-transparent text-primaryVariantColor border-primaryVariantColor;
+}
+
+.blogsViewMoreText {
+  @apply -mt-10 text-sm font-semibold;
+}
+
+.blogsViewMoreText > a {
+  @apply underline cursor-pointer;
 }

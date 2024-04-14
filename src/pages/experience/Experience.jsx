@@ -62,7 +62,14 @@ function Experience() {
         ))}
       </Swiper>
       <p className="experienceProjectText">
-        View CV for <span>Professional Projects</span>
+        Check Professional Projects from{" "}
+        <a
+          href="https://drive.google.com/file/d/16oDl6uHZiTqCTZ4N2gaJCpFiKgTQNqCO/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          CV
+        </a>
       </p>
     </section>
   );

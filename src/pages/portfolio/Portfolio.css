@@ -23,7 +23,7 @@
 }
 
 .portfolioInfoTitle {
-  @apply text-base md:text-lg font-semibold text-center border-b-4;
+  @apply text-base md:text-lg font-semibold text-center border-b-4 h-16 flex justify-center items-center;
 }
 
 .portfolioInfoType {

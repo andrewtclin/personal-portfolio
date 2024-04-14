@@ -19,7 +19,7 @@
 }
 
 .experienceCardTitle {
-  @apply text-base font-medium md:text-lg text-center py-1;
+  @apply flex justify-center items-center text-base font-medium md:text-lg text-center py-1 h-16;
 }
 
 .experienceCardCompany {
@@ -42,6 +42,6 @@
   @apply -mt-10 text-sm font-semibold;
 }
 
-.experienceProjectText > span {
+.experienceProjectText > a {
   @apply underline;
 }
