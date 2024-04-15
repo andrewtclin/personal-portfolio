@@ -5,11 +5,11 @@ import PageTitle from "../../components/pageTitle/PageTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-import { workExperience } from "../../utils/data";
+import { workIcons } from "../../utils/data";
 
 import "./Experience.css";
 
-function Experience() {
+function Experience({ workExperience, cvlink }) {
   return (
     <section id="experience" className="experience">
       <PageTitle title="Experience" description="Professional Work" />
@@ -41,7 +41,7 @@ function Experience() {
             <div className="experienceCardLogoFrame">
               <img
                 className="experienceCardLogo"
-                src={info["company_logo"]}
+                src={workIcons[info["id"]]}
                 alt={info["company"]}
               />
             </div>
@@ -63,11 +63,7 @@ function Experience() {
       </Swiper>
       <p className="experienceProjectText">
         Check Professional Projects from{" "}
-        <a
-          href="https://drive.google.com/file/d/16oDl6uHZiTqCTZ4N2gaJCpFiKgTQNqCO/view?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={cvlink} target="_blank" rel="noreferrer">
           CV
         </a>
       </p>

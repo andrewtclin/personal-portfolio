@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import Header from "./components/header/Header";
 import Nav from "./components/navPanel/Nav";
@@ -10,6 +10,7 @@ import Experience from "./pages/experience/Experience";
 import Skills from "./pages/skills/Skills";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Blogs from "./pages/blogs/Blogs";
+import { personalIntroApi } from "./apis/api";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -36,6 +37,14 @@ function App() {
 
   //#endregion
 
+  const [personalInfo, setPersonalInfo] = useState({});
+  useEffect(() => {
+    fetch(personalIntroApi)
+      .then((res) => res.json())
+      .then((data) => setPersonalInfo(data));
+    //eslint-disable-next-line
+  }, []);
+
   return (
     <div className="App">
       <Particles
@@ -47,14 +56,128 @@ function App() {
       />
       <Header />
       <Nav />
-      <Home />
-      <About />
-      <Education />
-      <Experience />
-      <Portfolio />
-      <Skills />
-      <Blogs />
-      <Footer />
+      <Home
+        description={
+          Object.keys(personalInfo).length
+            ? personalInfo["description"]
+            : ["Loading..."]
+        }
+        name={
+          Object.keys(personalInfo).length ? personalInfo["name"] : "Loading..."
+        }
+        youtube={
+          Object.keys(personalInfo).length ? personalInfo["youtube"] : "loading"
+        }
+        socialMedia={
+          Object.keys(personalInfo).length
+            ? personalInfo["socialMedia"]
+            : [{ name: "Loading...", link: "Loading..." }]
+        }
+      />
+      <About
+        summary={
+          Object.keys(personalInfo).length
+            ? personalInfo["summary"]
+            : "Loading..."
+        }
+        socialMedia={
+          Object.keys(personalInfo).length
+            ? personalInfo["socialMedia"]
+            : [{ name: "Loading...", link: "Loading..." }]
+        }
+        cvGroups={
+          Object.keys(personalInfo).length
+            ? personalInfo["cnCVs"]
+            : [{ name: "Loading...", link: "Loading..." }]
+        }
+      />
+      <Education
+        educationInfo={
+          Object.keys(personalInfo).length
+            ? personalInfo["education"]
+            : [
+                {
+                  id: "Loading...",
+                  institution: "Loading...",
+                  degree: "Loading...",
+                  Awards: ["Loading..."],
+                  date: "Loading...",
+                },
+              ]
+        }
+      />
+      <Experience
+        workExperience={
+          Object.keys(personalInfo).length
+            ? personalInfo["workExperience"]
+            : [
+                {
+                  id: "Loading...",
+                  title: "Loading...",
+                  company: "Loading...",
+                  date: "Loading...",
+                  job_summary: ["Loading..."],
+                },
+              ]
+        }
+        cvlink={
+          Object.keys(personalInfo).length
+            ? personalInfo["socialMedia"].find(
+                (media) => media["name"] === "CV"
+              )?.link
+            : "Loading..."
+        }
+      />
+      <Portfolio
+        portfolioWorks={
+          Object.keys(personalInfo).length
+            ? personalInfo["portfolioWorks"]
+            : [
+                {
+                  id: "Loading...",
+                  title: "Loading...",
+                  type: "Loading...",
+                  description: "Loading...",
+                  link: "Loading...",
+                  github: "Loading...",
+                  youtube: "Loading...",
+                },
+              ]
+        }
+      />
+      <Skills
+        skills={
+          Object.keys(personalInfo).length
+            ? personalInfo["skills"]
+            : [
+                {
+                  category: "Loading...",
+                  skills: ["Loading..."],
+                },
+              ]
+        }
+      />
+      <Blogs
+        mediumLink={
+          Object.keys(personalInfo).length
+            ? personalInfo["socialMedia"].find(
+                (media) => media["name"] === "Medium"
+              )?.link
+            : "Loading..."
+        }
+      />
+      <Footer
+        socialMedia={
+          Object.keys(personalInfo).length
+            ? personalInfo["socialMedia"]
+            : [{ name: "Loading...", link: "Loading..." }]
+        }
+        email={
+          Object.keys(personalInfo).length
+            ? personalInfo["email"]
+            : "Loading..."
+        }
+      />
     </div>
   );
 }

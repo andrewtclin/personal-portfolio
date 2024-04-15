@@ -1,12 +1,11 @@
 import PageTitle from "../../components/pageTitle/PageTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-
-import { educationInfo } from "../../utils/data";
+import { educationIcons } from "../../utils/data";
 
 import "./Education.css";
 
-function Education() {
+function Education({ educationInfo }) {
   return (
     <section id="education" className="education">
       <PageTitle title="Education" description="My Background" />
@@ -37,7 +36,7 @@ function Education() {
             <div className="educationCardLogoFrame">
               <img
                 className="educationCardLogo"
-                src={info.logo}
+                src={educationIcons[info["id"]]}
                 alt={info.institution}
               />
             </div>

@@ -2,13 +2,13 @@ import React from "react";
 
 import PageTitle from "../../components/pageTitle/PageTitle";
 
-import { summary, socialMedia, cvGroups } from "../../utils/data";
+import { socialMediaIcons } from "../../utils/data";
 
 import aboutPic from "../../assets/images/about-pic.jpg";
 
 import "./About.css";
 
-function About() {
+function About({ summary, socialMedia, cvGroups }) {
   return (
     <section id="about" className="about">
       <div className="aboutLeft">
@@ -23,14 +23,16 @@ function About() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="aboutLeftSocialIcon">{item["icon"]}</span>
+              <span className="aboutLeftSocialIcon">
+                {socialMediaIcons[item["name"]]}
+              </span>
               <p>{item["name"]}</p>
             </a>
           ))}
         </div>
         <div className="aboutLeftCVGroups">
           <p>Mandarin CVs:</p>
-          {cvGroups.map((cv, idx) => (
+          {cvGroups.map((cv) => (
             <a
               className="aboutLeftCV"
               key={cv["name"]}

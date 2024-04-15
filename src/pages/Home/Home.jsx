@@ -2,21 +2,17 @@ import React from "react";
 
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
-import {
-  socialMedia,
-  myName,
-  myDescription,
-  homeButton,
-} from "../../utils/data";
+import { socialMediaIcons } from "../../utils/data";
+
 import profilePic from "../../assets/images/home-profile-pic.jpeg";
 
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import "./Home.css";
 
-function Home() {
+function Home({ description, name, youtube, socialMedia }) {
   //eslint-disable-next-line
   const [text, count] = useTypewriter({
-    words: myDescription,
+    words: description,
     loop: true,
     delaySpeed: 2000,
   });
@@ -24,7 +20,7 @@ function Home() {
   return (
     <section className="home" id="">
       <div className="homeDescription">
-        <p className="homeDescriptionName">{myName}</p>
+        <p className="homeDescriptionName">{name}</p>
         <span className="homeDescriptionBreak" />
         <p className="homeDescriptionHeading">
           {text}
@@ -33,11 +29,11 @@ function Home() {
 
         <a
           className="homeDescriptionButton"
-          href={homeButton["link"]}
+          href={youtube}
           target="_blank"
           rel="noreferrer"
         >
-          {homeButton["name"]}
+          Intro Video
         </a>
         <div className="homeDescriptionMore">
           <MdKeyboardDoubleArrowDown />
@@ -56,7 +52,7 @@ function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              {item["icon"]}
+              {socialMediaIcons[item["name"]]}
             </a>
           ))}
         </div>

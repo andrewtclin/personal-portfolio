@@ -4,11 +4,9 @@ import PageTitle from "../../components/pageTitle/PageTitle";
 
 import { AgGridReact } from "ag-grid-react";
 
-import { skills } from "../../utils/data";
-
 import "./Skills.css";
 
-function Skills() {
+function Skills({ skills }) {
   //#region configurations of AG-Grid
   const columnDefs = [
     {

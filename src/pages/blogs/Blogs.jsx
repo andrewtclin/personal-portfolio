@@ -7,10 +7,10 @@ import { Pagination } from "swiper/modules";
 
 import { mediumApi } from "../../apis/api";
 
-import "./Blogs.css";
 import { AiFillMediumSquare } from "react-icons/ai";
+import "./Blogs.css";
 
-function Blogs() {
+function Blogs({ mediumLink }) {
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
 
@@ -37,7 +37,7 @@ function Blogs() {
   }, [articles]);
 
   return (
-    <div className="blogs">
+    <section id="blogs" className="blogs">
       <PageTitle title="Blogs" description="Sharing Knowledges" />
       <div className="blogsContainer">
         <p className="blogsContainerTitle">My Latest 10 Articles</p>
@@ -129,11 +129,11 @@ function Blogs() {
       </Swiper>
       <p className="blogsViewMoreText">
         Read more on{" "}
-        <a href="https://medium.com/@chuntcdj" target="_blank" rel="noreferrer">
+        <a href={mediumLink} target="_blank" rel="noreferrer">
           Medium
         </a>
       </p>
-    </div>
+    </section>
   );
 }
 

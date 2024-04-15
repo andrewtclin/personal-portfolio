@@ -7,7 +7,7 @@
 }
 
 .navMenuIcon {
-  @apply text-xl md:text-2xl cursor-pointer transition hover:bg-[rgba(0,0,0,0.3)] duration-100 ease-in bg-transparent p-[0.9rem] md:rounded-sm flex text-lightColor hover:text-white rounded-[50%];
+  @apply text-lg md:text-2xl cursor-pointer transition hover:bg-[rgba(0,0,0,0.3)] duration-100 ease-in bg-transparent p-[0.9rem] md:rounded-sm flex text-lightColor hover:text-white rounded-[50%];
 }
 
 .navActive {

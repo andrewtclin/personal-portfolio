@@ -4,13 +4,13 @@ import PageTitle from "../../components/pageTitle/PageTitle";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-import { portfolioWorks } from "../../utils/data";
+import { portfolioIcons } from "../../utils/data";
 
 import { AiFillYoutube, AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 
 import "./Portfolio.css";
 
-function Portfolio() {
+function Portfolio({ portfolioWorks }) {
   return (
     <section id="projects" className="portfolio">
       <PageTitle title="Portfolio" description="My works in AI, ML, Software" />
@@ -45,7 +45,7 @@ function Portfolio() {
             <div className="portfolioCardLogoFrame">
               <img
                 className="portfolioCardLogo"
-                src={portfolioWork["img"]}
+                src={portfolioIcons[portfolioWork["id"]]}
                 alt={portfolioWork["title"]}
               />
             </div>

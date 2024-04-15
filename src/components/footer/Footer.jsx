@@ -4,16 +4,16 @@ import { useForm } from "react-hook-form";
 
 import { motion } from "framer-motion";
 
-import { socialMedia, emailAddress } from "../../utils/data";
+import { socialMediaIcons } from "../../utils/data";
 
 import "./Footer.css";
 
-function Footer() {
+function Footer({ socialMedia, email }) {
   const [contactActive, isContactActive] = useState(false);
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    window.location.href = `mailto:${emailAddress}?subject=${data.subject}&body=Hi, my name is ${data.name}. \n${data.message}
+    window.location.href = `mailto:${email}?subject=${data.subject}&body=Hi, my name is ${data.name}. \n${data.message}
     (${data.email})`;
   };
 
@@ -27,7 +27,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            {social["icon"]}
+            {socialMediaIcons[social["name"]]}
           </a>
         ))}
       </div>
