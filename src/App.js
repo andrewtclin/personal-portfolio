@@ -17,6 +17,8 @@ import { loadFull } from "tsparticles";
 
 import { particlesOptions } from "./utils/config";
 
+import { motion } from "framer-motion";
+
 import "./App.css";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -46,7 +48,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <motion.div
+      className="App"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -178,7 +185,7 @@ function App() {
             : "Loading..."
         }
       />
-    </div>
+    </motion.div>
   );
 }
 
