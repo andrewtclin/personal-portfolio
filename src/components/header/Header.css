@@ -13,3 +13,7 @@
 .headerInfoName {
   @apply text-base font-semibold mx-4 tracking-[2px] cursor-pointer;
 }
+
+.headerInfoTime {
+  @apply hidden lg:flex text-xs -ml-2 pt-1;
+}

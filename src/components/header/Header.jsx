@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { headerInfoName } from "../../utils/data";
+import { timeApi } from "../../apis/api";
 
 import headerAvatar from "../../assets/images/header-avatar.jpg";
 
 import "./Header.css";
 
 function Header() {
+  const [timeInfo, setTimeInfo] = useState({});
+  useEffect(() => {
+    fetch(timeApi)
+      .then((res) => res.json())
+      .then((data) => setTimeInfo(data));
+    //eslint-disable-next-line
+  }, []);
   return (
     <header className="header">
       <div className="headerInfo">
@@ -16,6 +24,19 @@ function Header() {
           alt="headerAvatar"
         />
         <p className="headerInfoName">{headerInfoName}</p>
+        <p className="headerInfoTime">
+          {Object.keys(timeInfo).length
+            ? timeInfo["timezone"] +
+              ", " +
+              new Date(timeInfo["datetime"]).toLocaleString(undefined, {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+              })
+            : ""}
+        </p>
       </div>
     </header>
   );

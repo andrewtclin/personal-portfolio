@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "ag-grid-react": "^31.2.0",
+    "cross-env": "^7.0.3",
     "framer-motion": "^11.0.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,7 +24,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "winBuild": "cross-env set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
