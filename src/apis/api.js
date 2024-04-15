@@ -5,4 +5,4 @@ export const personalIntroApi =
   "https://andrewtclin.github.io/info/personalIntro.json";
 
 export const timeApi =
-  "http://worldtimeapi.org/api/timezone/Australia/Brisbane";
+  "https://worldtimeapi.org/api/timezone/Australia/Brisbane";
