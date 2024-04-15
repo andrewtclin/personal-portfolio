@@ -35,11 +35,11 @@
 }
 
 .homeProfileFrame {
-  @apply h-48 sm:h-64 lg:h-96 border-2 border-lightColor;
+  @apply h-48 sm:h-64 min-w-40 lg:h-96 border-2 border-lightColor;
 }
 
 .homeProfilePic {
-  @apply h-full object-cover relative -translate-x-3 -translate-y-3 cursor-pointer hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out duration-500;
+  @apply h-full min-w-40 object-cover relative -translate-x-3 -translate-y-3 cursor-pointer hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out duration-500;
 }
 
 .homeSocialMedia {
