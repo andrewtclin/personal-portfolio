@@ -37,7 +37,7 @@ function Experience({ workExperience, cvlink }) {
         }}
       >
         {workExperience.map((info) => (
-          <SwiperSlide key={info["institution"]} className="experienceCard">
+          <SwiperSlide key={info["company"]} className="experienceCard">
             <div className="experienceCardLogoFrame">
               <img
                 className="experienceCardLogo"
