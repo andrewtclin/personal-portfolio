@@ -13,6 +13,7 @@ function Experience({ workExperience, cvlink }) {
   return (
     <section id="experience" className="experience">
       <PageTitle title="Experience" description="Professional Work" />
+      {/* Main Experience Info */}
       <Swiper
         className="experienceCards"
         pagination={{
@@ -36,8 +37,10 @@ function Experience({ workExperience, cvlink }) {
           padding: "0 0 25px 0",
         }}
       >
+        {/* Each Experience Info */}
         {workExperience.map((info) => (
           <SwiperSlide key={info["company"]} className="experienceCard">
+            {/* Company Logo */}
             <div className="experienceCardLogoFrame">
               <img
                 className="experienceCardLogo"
@@ -45,9 +48,13 @@ function Experience({ workExperience, cvlink }) {
                 alt={info["company"]}
               />
             </div>
+            {/* Position */}
             <p className="experienceCardTitle">{info.title}</p>
+            {/* Company Name */}
             <p className="experienceCardCompany">{info.company}</p>
+            {/* Date */}
             <p className="experienceCardDate">{info.date}</p>
+            {/* Description of Position */}
             <div className="experienceCardSummary">
               {info["job_summary"].map((summary, idx) => (
                 <p

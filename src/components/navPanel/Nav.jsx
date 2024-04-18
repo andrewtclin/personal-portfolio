@@ -5,19 +5,28 @@ import { navMenuItems } from "../../utils/data";
 import "./Nav.css";
 
 function Nav() {
+  //#region ------ variable declaration ------
   const [activeNav, setActiveNav] = useState("#");
   const [isBottom, setIsBottom] = useState(false);
+  //#endregion
 
+  //#region ------ functions ------
+  // setting current active page
   const triggerNav = (navItem) => setActiveNav(navItem);
 
+  // scroll to bottom
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: "smooth",
     });
   };
+  //#endregion
 
+  //#region ------ lifecycle ------
+  // navigation observer - change active nav based on the page
   useEffect(() => {
+    // main observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -37,6 +46,12 @@ function Nav() {
       }
     );
 
+    const sections = document.querySelectorAll("section, header");
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // footer observer - offset mobile nav panel when reaching footer
     const handleFooterIntersect = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -46,7 +61,9 @@ function Nav() {
         }
       });
     };
+
     const footer = document.getElementById("footer");
+
     if (footer) {
       var footerObserver = new IntersectionObserver(handleFooterIntersect, {
         root: null,
@@ -56,11 +73,7 @@ function Nav() {
       footerObserver.observe(footer);
     }
 
-    const sections = document.querySelectorAll("section, header");
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
+    // cleanup
     return () => {
       sections.forEach((section) => {
         observer.unobserve(section);
@@ -70,6 +83,7 @@ function Nav() {
       }
     };
   }, []);
+  //#endregion
 
   return (
     <div className="nav">

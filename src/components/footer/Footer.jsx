@@ -9,16 +9,24 @@ import { socialMediaIcons } from "../../utils/data";
 import "./Footer.css";
 
 function Footer({ socialMedia, email }) {
-  const [contactActive, isContactActive] = useState(false);
-  const { register, handleSubmit } = useForm();
+  //#region ------ configuration ------
+  const { register, handleSubmit } = useForm(); // hook form
+  //#endregion
 
+  //#region ------ variable declaration ------
+  const [contactActive, isContactActive] = useState(false);
+  //#endregion
+
+  //#region ------ functions ------
   const onSubmit = (data) => {
     window.location.href = `mailto:${email}?subject=${data.subject}&body=Hi, my name is ${data.name}. \n${data.message}
     (${data.email})`;
   };
+  //#endregion
 
   return (
     <footer id="footer" className="footer">
+      {/* Social Media */}
       <div className="footerSocialIcons">
         {socialMedia?.map((social) => (
           <a
@@ -31,7 +39,7 @@ function Footer({ socialMedia, email }) {
           </a>
         ))}
       </div>
-
+      {/* Contact Form */}
       <div className="footerContact">
         <button onClick={() => isContactActive(true)}>Contact</button>
       </div>

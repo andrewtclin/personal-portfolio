@@ -26,7 +26,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-quartz.css";
 
 function App() {
-  //#region particlejs configuration
+  //#region ------ configuration ------
   //eslint-disable-next-line
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
@@ -39,15 +39,23 @@ function App() {
 
   //#endregion
 
+  //#region ------ variable declaration ------
   const [personalInfo, setPersonalInfo] = useState({});
+  //#endregion
+
+  //#region ------ lifecycle ------
+  //#region apis
   useEffect(() => {
     fetch(personalIntroApi)
       .then((res) => res.json())
       .then((data) => setPersonalInfo(data));
     //eslint-disable-next-line
   }, []);
+  //#endregion
+  //#endregion
 
   return (
+    // feeding common API data to the components
     <motion.div
       className="App"
       initial={{ opacity: 0 }}

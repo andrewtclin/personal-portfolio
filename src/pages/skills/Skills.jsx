@@ -7,7 +7,8 @@ import { AgGridReact } from "ag-grid-react";
 import "./Skills.css";
 
 function Skills({ skills }) {
-  //#region configurations of AG-Grid
+  //#region ------ configurations ------
+  //#region ag-grid
   const columnDefs = [
     {
       headerName: "Category",
@@ -39,10 +40,12 @@ function Skills({ skills }) {
     domLayout: "autoHeight",
   };
   //#endregion
+  //#endregion
 
   return (
     <section id="projects" className="skills">
       <PageTitle title="Skills" description="My Abilities" />
+      {/* Skills Display */}
       <div className="skillsGrid ag-theme-quartz">
         <AgGridReact
           columnDefs={columnDefs}

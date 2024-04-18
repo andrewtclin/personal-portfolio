@@ -10,15 +10,19 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import "./Home.css";
 
 function Home({ description, name, youtube, socialMedia }) {
+  //#region ------ configuration ------
+  // typewriter config
   //eslint-disable-next-line
   const [text, count] = useTypewriter({
     words: description,
     loop: true,
     delaySpeed: 2000,
   });
+  //#endregion
 
   return (
     <section className="home" id="">
+      {/* Left Block */}
       <div className="homeDescription">
         <p className="homeDescriptionName">{name}</p>
         <span className="homeDescriptionBreak" />
@@ -42,10 +46,14 @@ function Home({ description, name, youtube, socialMedia }) {
           </a>
         </div>
       </div>
+
+      {/* Right Block */}
       <div className="homeProfile">
+        {/* Home Image */}
         <div className="homeProfileFrame">
           <img className="homeProfilePic" src={profilePic} alt="Profile" />
         </div>
+        {/* Social Media Links */}
         <div className="homeSocialMedia">
           {socialMedia.map((item) => (
             <a

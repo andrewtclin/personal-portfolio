@@ -9,6 +9,7 @@ function Education({ educationInfo }) {
   return (
     <section id="education" className="education">
       <PageTitle title="Education" description="My Background" />
+      {/* Main Education Info */}
       <Swiper
         className="educationCards"
         pagination={{
@@ -31,8 +32,10 @@ function Education({ educationInfo }) {
           "--swiper-theme-color": "#D4613C",
         }}
       >
+        {/* Mapping Each Education */}
         {educationInfo.map((info) => (
           <SwiperSlide key={info["institution"]} className="educationCard">
+            {/* Logo */}
             <div className="educationCardLogoFrame">
               <img
                 className="educationCardLogo"
@@ -40,8 +43,11 @@ function Education({ educationInfo }) {
                 alt={info.institution}
               />
             </div>
+            {/* Degree */}
             <p className="educationCardDegree">{info.degree}</p>
+            {/* Institution */}
             <p className="educationCardInstitution">{info.institution}</p>
+            {/* Date */}
             <p className="educationCardDate">{info.date}</p>
             {info["GPA"] ? (
               <p className="educationGPA">GPA: {info["GPA"]}</p>

@@ -14,6 +14,7 @@ function Portfolio({ portfolioWorks }) {
   return (
     <section id="projects" className="portfolio">
       <PageTitle title="Portfolio" description="My works in AI, ML, Software" />
+      {/* Main Portfolio Info */}
       <Swiper
         className="portfolioCards"
         pagination={{
@@ -40,8 +41,10 @@ function Portfolio({ portfolioWorks }) {
           "--swiper-theme-color": "#D4613C",
         }}
       >
+        {/* Each Portfolio Info */}
         {portfolioWorks.map((portfolioWork) => (
           <SwiperSlide key={portfolioWork["title"]} className="portfolioCard">
+            {/* Work Snapshot */}
             <div className="portfolioCardLogoFrame">
               <img
                 className="portfolioCardLogo"
@@ -49,13 +52,16 @@ function Portfolio({ portfolioWorks }) {
                 alt={portfolioWork["title"]}
               />
             </div>
+            {/* Title */}
             <div className="portfolioInfo">
               <p className="portfolioInfoTitle">{portfolioWork["title"]}</p>
               <p className="portfolioInfoType">{portfolioWork["type"]}</p>
               <p className="portfolioInfoDescription">
+                {/* Description */}
                 {portfolioWork["description"]}
               </p>
             </div>
+            {/* Links to work */}
             <div className="portfolioWorkLinks">
               {portfolioWork.youtube ? (
                 <a

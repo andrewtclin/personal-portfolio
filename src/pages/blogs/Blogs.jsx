@@ -11,9 +11,13 @@ import { AiFillMediumSquare } from "react-icons/ai";
 import "./Blogs.css";
 
 function Blogs({ mediumLink }) {
+  //#region ------ variable declaration ------
   const [articles, setArticles] = useState([]);
   const [filteredArticles, setFilteredArticles] = useState([]);
+  //#endregion
 
+  //#region ------ functions ------
+  // filter articles by title
   const onFilterChange = (e) => {
     let value = e.target.value;
     if (value) {
@@ -25,22 +29,28 @@ function Blogs({ mediumLink }) {
       setFilteredArticles([...articles]);
     }
   };
+  //#endregion
 
+  //#region ------ lifecycle ------
+  // api call to medium
   useEffect(() => {
     fetch(mediumApi)
       .then((res) => res.json())
       .then((data) => setArticles(data.items));
   }, []);
 
+  // set filtered articles
   useEffect(() => {
     setFilteredArticles([...articles]);
   }, [articles]);
+  //#endregion
 
   return (
     <section id="blogs" className="blogs">
       <PageTitle title="Blogs" description="Sharing Knowledges" />
       <div className="blogsContainer">
         <p className="blogsContainerTitle">My Latest 10 Articles</p>
+        {/* Filtering articles */}
         <input
           type="text"
           className="blogsFilterInput"
@@ -48,6 +58,7 @@ function Blogs({ mediumLink }) {
           onChange={onFilterChange}
         />
       </div>
+      {/* Main Blog Info */}
       <Swiper
         className="blogsCards"
         pagination={{
@@ -75,8 +86,10 @@ function Blogs({ mediumLink }) {
           padding: "0 0 25px 0",
         }}
       >
+        {/* Each Article Component */}
         {filteredArticles.map((article) => (
           <SwiperSlide key={article["title"]} className="blogsCard">
+            {/* Article Snapshot */}
             <div className="blogsArticleThumbnailFrame">
               <img
                 className="blogsArticleThumbnail"
@@ -88,12 +101,15 @@ function Blogs({ mediumLink }) {
                 alt="thumbnail"
               />
             </div>
+
             <div className="blogsArticle">
+              {/* Title */}
               <p className="blogsArticleTitle">
                 {article["title"].length > 42
                   ? article["title"].slice(0, 42) + "..."
                   : article["title"]}
               </p>
+              {/* Article Preview */}
               {article["description"].length > 150 ? (
                 <div
                   className="blogsArticleDescription"
@@ -107,12 +123,7 @@ function Blogs({ mediumLink }) {
                   dangerouslySetInnerHTML={{ __html: article["description"] }}
                 ></div>
               )}
-              {/* <p className="blogsArticleDescription">
-                {article["description"].length > 100
-                  ? article["description"].slice(0, 100) + "..."
-                  : article["description"]}
-              </p> */}
-
+              {/* Link to Article */}
               <div className="articleLinkContainer">
                 <a
                   href={article["link"]}
@@ -127,6 +138,7 @@ function Blogs({ mediumLink }) {
           </SwiperSlide>
         ))}
       </Swiper>
+      {/* Link to blog page */}
       <p className="blogsViewMoreText">
         Read more on{" "}
         <a href={mediumLink} target="_blank" rel="noreferrer">

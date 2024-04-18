@@ -9,9 +9,14 @@ import aboutPic from "../../assets/images/about-pic.jpg";
 import "./About.css";
 
 function About({ summary, socialMedia, cvGroups }) {
+  //#region ------ variable declaration ------
   const [githubProfile, setGithubProfile] = useState({});
+  //#endregion
 
+  //#region ------ lifecycle ------
+  //#region apis
   useEffect(() => {
+    // github api functio declaration
     async function getGithubUserProfile() {
       try {
         const response = await fetch(
@@ -34,6 +39,7 @@ function About({ summary, socialMedia, cvGroups }) {
       }
     }
 
+    // github api call
     getGithubUserProfile()
       .then((profile) => {
         setGithubProfile({
@@ -47,12 +53,17 @@ function About({ summary, socialMedia, cvGroups }) {
         console.error("Error:", error.message);
       });
   }, []);
+  //#endregion
+  //#endregion
 
   return (
     <section id="about" className="about">
+      {/* Left Block */}
       <div className="aboutLeft">
         <PageTitle title="About Me" description="Know More" />
+        {/* Self Description */}
         <p className="aboutLeftSummary">{summary}</p>
+        {/* Social Media Icons */}
         <div className="aboutLeftSocialGroups">
           {socialMedia.map((item) => (
             <a
@@ -70,6 +81,7 @@ function About({ summary, socialMedia, cvGroups }) {
           ))}
         </div>
 
+        {/* GitHub Info */}
         {Object.keys(githubProfile).length ? (
           <div className="aboutLeftGithubInfo">
             <p>
@@ -97,6 +109,7 @@ function About({ summary, socialMedia, cvGroups }) {
           "Loading..."
         )}
 
+        {/* CV Links */}
         <div className="aboutLeftCVGroups">
           <p>Mandarin CVs:</p>
           {cvGroups.map((cv) => (
@@ -112,6 +125,8 @@ function About({ summary, socialMedia, cvGroups }) {
           ))}
         </div>
       </div>
+
+      {/* Right Block */}
       <div className="aboutRight">
         <img className="aboutRightPic" src={aboutPic} alt="About" />
       </div>
