@@ -54,7 +54,7 @@ This project or portfolio website currently has the following features:
   * Portfolio - Showcasing the past works, and documenting them accordingly.
   * Skills - Displaying the domain skills or languages you know in a clear grid.
   * Blogs - This page allows you to display all the blogs that you are doing.
-  * > For any of the pages that are not needed, remove them accordingly.
+  > For any of the pages that are not needed, remove them accordingly.
 
 * Folder Structures:
   * apis - The folder where external apis will be stored, used to generate information for the page.
@@ -85,8 +85,8 @@ In general, this project uses:
 * ag-grid-react - the robust component that organizes data into tabular format / grid.
 
 **To install:** install via *package.json*.
-> * If you are using `npm`, run `npm install`
-> * If you are using `yarn`, run `yarn`
+> If you are using `npm`, run `npm install`
+> If you are using `yarn`, run `yarn`
 
 ---
 
