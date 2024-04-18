@@ -12,13 +12,13 @@ function Skills({ skills }) {
     {
       headerName: "Category",
       field: "category",
-      flex: 1,
+      width: 150,
       cellStyle: { fontWeight: 600 },
     },
     {
       headerName: "Skills",
       field: "skills",
-      flex: 2,
+      width: 800,
       cellRenderer: formatSkills,
     },
   ];
@@ -36,17 +36,7 @@ function Skills({ skills }) {
   }
 
   const gridOptions = {
-    suppressHorizontalScroll: false,
     domLayout: "autoHeight",
-    onGridReady: function (params) {
-      if (params.api) {
-        const screenWidth = window.innerWidth;
-        if (screenWidth < 768) {
-          params.columnApi.setColumnWidth("category", 200);
-          params.columnApi.setColumnWidth("skills", 400);
-        }
-      }
-    },
   };
   //#endregion
 

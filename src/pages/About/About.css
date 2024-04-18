@@ -3,7 +3,7 @@
 }
 
 .aboutLeft {
-  @apply w-full h-full flex flex-col justify-start items-start gap-y-6 md:gap-y-10 text-justify mr-0 lg:pr-12;
+  @apply w-full h-full flex flex-col justify-start items-center lg:items-start gap-y-6 md:gap-y-10 text-justify mr-0 lg:pr-12;
 }
 
 .aboutLeftTitle {
@@ -23,7 +23,7 @@
 }
 
 .aboutLeftGithubInfo {
-  @apply text-xs md:text-start flex flex-col justify-start items-center md:items-start text-center gap-y-1 border rounded-sm px-2 -mb-4 md:-mb-6;
+  @apply text-xs md:text-start flex flex-col justify-start items-start text-center gap-y-1 border rounded-sm px-2 -mb-4 md:-mb-6;
 }
 
 .aboutLeftGithubInfo > p > span {
