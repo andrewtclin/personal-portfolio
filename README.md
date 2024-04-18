@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is licensed under *MIT*, feel free to reuse it with **original ownership mentioned**.
 
-## Available Scripts
+> For running version, checkout **my personal portfolio**: [TC. Lin](https://tclin.jastudio-tech.com/)
 
-In the project directory, you can run:
+This project is built with *ReactJS*.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Purpose of this Application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The purpose of this application is to create a portfolio or personal website with all information generated from *external sources*.
+* With that, once the coding is completed and established, the website will require *minimum effort to maintain* as update of information can done without needing to change the source code. 
 
-### `yarn test`
+Currently, the website is built under my personal information, serving as the **demo** of my personal work.
+* To update the APIs according to the needs, make changes to *apis/api.js* file.
+* For any un-needed features, read the section ***List of Features*** section.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+However, this project is under *MIT License*, thus, ones are allowed to reproduce it using the source code, with **original ownership mentioned**.
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contribute to this Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To make contributions or add features to this project:
+> 1. Fork this repository.
+> 2. Add additional features or enhancements to the existing codes.
+> 3. Make a pull request to notify me.
+> 4. You are good to go!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## List of Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project or portfolio website currently has the following features:
+* General features:
+  * This application or portfolio page is fully **responsive**, adapted to **Responsive-Web-Design (RWD)**.
+  * During the desktop view, the navigation panel will be located where the header is.
+  * During the mobile view, the navigation panel will be **floating** at the bottom of the screen, with *backdrop* applied, meaning that the mobile navigation panel is a glass-looking translucent panel.
+  * While navigating: the page will automatically detect the location of the page, and the *active* navigation will update accordingly.
+  * By clicking on any option in the navigation panel, *smooth-scroll* is applied.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* For existing pages:
+  * Home - The landing page of the website.
+  * About - The page describing the description.
+  * Education - This page details the education history of the background.
+  * Experience - Displaying the professional work experiences.
+  * Portfolio - Showcasing the past works, and documenting them accordingly.
+  * Skills - Displaying the domain skills or languages you know in a clear grid.
+  * Blogs - This page allows you to display all the blogs that you are doing.
+  > For any of the pages that are not needed, remove them accordingly.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Folder Structures:
+  * apis - The folder where external apis will be stored, used to generate information for the page.
+  * assets - The folder where media files will be stored, import them in code as needed.
+  * components - *Reusable Components* for the page, import them wherever needed, such as *Button*, *Header*, etc.
+  * utils - The folder where all helper information or functions are stored, can be reused in multiple code places.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Generate Information from External APIs
+  * If you are using an external API that requires *an API key*, create a *.env* file to store your secret key or token.
+    * **Create your API key with the format:** REACT_APP_XXX (Starting with *REACT_APP*) as this project uses *React*, and it is a naming convention when creating a .env key.
 
-## Learn More
+* Others
+  * In package.json, the building command is set with *cross-env GENERATE_SOURCEMAP=false* to hide the source code / map, so that it is not available to view via browser in the production state.
+   
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## List of Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For details of the dependencies, check *package.json*.
 
-### Code Splitting
+In general, this project uses:
+* tailwindcss - for modern css styling
+* react-particles - for background decoration
+* framer-motion - for animation throughout the page
+* react-hook-form - to incorporate forms in react
+* react-simple-typewriter - to create the typewriter effect in the home page
+* swiper - the component that allows swiper effect, applied in *education*, *experience*, *portfolio*, *blogs*.
+* ag-grid-react - the robust component that organizes data into tabular format / grid.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**To install:** install via *package.json*.
+> If you are using `npm`, run `npm install`
+> If you are using `yarn`, run `yarn`
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Description of Architecture
 
-### Making a Progressive Web App
+This project is designed with the following architecture:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Component-related:
+* The outer-most wrapper: App.js
+  * Contains both *pages* and *components*
+     * Pages: Home, About, Education, Experience, Portfolio, Skills, Blogs
+     * Components: Header, Nav, Footer
+   * For every page, it shares the same style of the title, which the component title is reused across all pages.
+     * Component: PageTitle.jsx
+    
+ 
+Data-related:
+* As stated in the *List of Dependencies* section, the folder structure is the architecture of the data-related elements:
+  * apis - The folder where external apis will be stored, used to generate information for the page.
+  * assets - The folder where media files will be stored, import them in code as needed.
+  * components - *Reusable Components* for the page, import them wherever needed, such as *Button*, *Header*, etc.
+  * utils - The folder where all helper information or functions are stored, can be reused in multiple code places.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Reporting Issues
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To report issues or bugs, **create a new issue** via *Issue* tab, it will be reviewed as soon as possible.
+* Be sure to write description for the issue that you are facing, so that it can be dealt efficiently.
