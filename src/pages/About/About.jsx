@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import PageTitle from "../../components/pageTitle/PageTitle";
 
-import { Octokit } from "octokit";
-
 import { socialMediaIcons } from "../../utils/data";
 
 import aboutPic from "../../assets/images/about-pic.jpg";
@@ -15,29 +13,34 @@ function About({ summary, socialMedia, cvGroups }) {
 
   useEffect(() => {
     async function getGithubUserProfile() {
-      const octokit = new Octokit({
-        auth: process.env.REACT_APP_GITHUB_TOKEN,
-      });
       try {
-        const res = await octokit.request("GET /users/andrewtclin", {
-          headers: {
-            "X-GitHub-Api-Version": "2022-11-28",
-          },
-        });
-        return res;
+        const response = await fetch(
+          "https://api.github.com/users/andrewtclin",
+          {
+            headers: {
+              Authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+              Accept: "application/vnd.github.v3+json",
+            },
+          }
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
       } catch (error) {
         console.error("Error fetching GitHub profile:", error.message);
         throw error;
       }
     }
+
     getGithubUserProfile()
-      .then((response) => {
-        const profile = response.data;
+      .then((profile) => {
         setGithubProfile({
-          bio: profile["bio"],
-          public_repos: profile["public_repos"],
-          private_repos: profile["total_private_repos"],
-          last_updated: profile["updated_at"],
+          bio: profile.bio,
+          public_repos: profile.public_repos,
+          private_repos: profile.total_private_repos,
+          last_updated: profile.updated_at,
         });
       })
       .catch((error) => {
