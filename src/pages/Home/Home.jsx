@@ -36,8 +36,10 @@ function Home({ description, name, youtube, socialMedia }) {
           Intro Video
         </a>
         <div className="homeDescriptionMore">
-          <MdKeyboardDoubleArrowDown />
-          <a href="#about">Scroll Down</a>
+          <a href="#about">
+            <MdKeyboardDoubleArrowDown />
+            Scroll Down
+          </a>
         </div>
       </div>
       <div className="homeProfile">

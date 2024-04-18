@@ -26,6 +26,10 @@
   @apply text-primaryColor hidden cursor-pointer md:flex absolute bottom-0 left-1/2 translate-x-[-50%] pb-4 tracking-[2px];
 }
 
+.homeDescriptionMore > a {
+  @apply flex justify-center items-center gap-x-2;
+}
+
 .homeDescriptionMore > svg {
   @apply animate-bounce mr-2 mt-2;
 }
