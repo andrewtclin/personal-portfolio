@@ -1,12 +1,6 @@
 # Portfolio Website
 
-This website is made to be dynamic, handling all information from *APIs of some sort*.
-
-The aim is to make the portfolio website more robust, so that *all data can be generated from external sources*. 
-
-With that, once the coding is completed and established, the website will require *minimum effort to maintain*. 
-
-This would mean that whenever there is an information update, the information can be directly updated from *external APIs*.
+This project is licensed under *MIT*, feel free to reuse it with **original ownership mentioned**.
 
 > For running version, checkout **my personal portfolio**: [TC. Lin](https://tclin.jastudio-tech.com/)
 
@@ -16,7 +10,8 @@ This project is built with *ReactJS*.
 
 ## Purpose of this Application
 
-The purpose of this application is to create a portfolio or personal website with all information generated from external sources.
+The purpose of this application is to create a portfolio or personal website with all information generated from *external sources*.
+* With that, once the coding is completed and established, the website will require *minimum effort to maintain* as update of information can done without needing to change the source code. 
 
 Currently, the website is built under my personal information, serving as the **demo** of my personal work.
 * To update the APIs according to the needs, make changes to *apis/api.js* file.
@@ -94,4 +89,25 @@ In general, this project uses:
 
 This project is designed with the following architecture:
 
-For 
+Component-related:
+* The outer-most wrapper: App.js
+  * Contains both *pages* and *components*
+     * Pages: Home, About, Education, Experience, Portfolio, Skills, Blogs
+     * Components: Header, Nav, Footer
+   * For every page, it shares the same style of the title, which the component title is reused across all pages.
+     * Component: PageTitle.jsx
+    
+ 
+Data-related:
+* As stated in the *List of Dependencies* section, the folder structure is the architecture of the data-related elements:
+  * apis - The folder where external apis will be stored, used to generate information for the page.
+  * assets - The folder where media files will be stored, import them in code as needed.
+  * components - *Reusable Components* for the page, import them wherever needed, such as *Button*, *Header*, etc.
+  * utils - The folder where all helper information or functions are stored, can be reused in multiple code places.
+
+---
+
+### Reporting Issues
+
+To report issues or bugs, **create a new issue** via *Issue* tab, it will be reviewed as soon as possible.
+* Be sure to write description for the issue that you are facing, so that it can be dealt efficiently.
