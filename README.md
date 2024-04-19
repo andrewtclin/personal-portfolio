@@ -24,10 +24,10 @@ However, this project is under *MIT License*, thus, ones are allowed to reproduc
 ## Contribute to this Project
 
 To make contributions or add features to this project:
-> 1. Fork this repository.
-> 2. Add additional features or enhancements to the existing codes.
-> 3. Make a pull request to notify me.
-> 4. You are good to go!
+1. Fork this repository.
+2. Add additional features or enhancements to the existing codes.
+3. Make a pull request to notify me.
+4. You are good to go!
 
 ---
 
