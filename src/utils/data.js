@@ -19,6 +19,7 @@ import boardGameThumbnail from "../assets/images/boardgame_thumbnail.png";
 import ecommerceThumbnail from "../assets/images/ecommerce_thumbnail.png";
 import artShopThumbnail from "../assets/images/art_shop_thumbnail.jpg";
 import erpThumbnail from "../assets/images/erp_thumbnail.png";
+import miningErpThumbnail from "../assets/images/mining-erp.png";
 import covidThumbnail from "../assets/images/covid_thumbnail.png";
 import bicycleThumbnail from "../assets/images/bicycle_thumbnail.png";
 import groceryThumbnail from "../assets/images/grocery_thumbnail.png";
@@ -69,6 +70,7 @@ export const educationIcons = {
 };
 
 export const workIcons = {
+  qut: qutLogo,
   spingence: spingenceLogo,
   ksi: ksiLogo,
   jastudio: jaLogo,
@@ -90,6 +92,7 @@ export const portfolioIcons = {
   "food-shopping": ecommerceThumbnail,
   "art-trading": artShopThumbnail,
   "erp-accounting": erpThumbnail,
+  "erp-geological": miningErpThumbnail,
   "covid-tracker": covidThumbnail,
   "bi-bicycle": bicycleThumbnail,
   "bi-grocery": groceryThumbnail,

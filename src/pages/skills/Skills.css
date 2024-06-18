@@ -3,5 +3,5 @@
 }
 
 .skillsGrid {
-  @apply my-8 md:my-16 h-[90%] w-full overflow-x-scroll;
+  @apply my-8 md:my-16 h-[500px] md:h-[90%] w-full overflow-x-scroll overflow-y-scroll;
 }

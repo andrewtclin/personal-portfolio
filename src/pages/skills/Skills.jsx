@@ -38,6 +38,7 @@ function Skills({ skills }) {
 
   const gridOptions = {
     domLayout: "autoHeight",
+    rowHeight: 50,
   };
   //#endregion
   //#endregion
