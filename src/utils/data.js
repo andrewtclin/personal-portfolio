@@ -3,6 +3,7 @@ import uqLogo from "../assets/images/uq_logo.png";
 import spingenceLogo from "../assets/images/spingence_logo.jpg";
 import ksiLogo from "../assets/images/ksi_logo.png";
 import jaLogo from "../assets/images/JAstudio_logo.png";
+import raytracerLogo from "../assets/images/raytracer_logo.jpeg"
 
 import linkedinThumbnail from "../assets/images/linkedin_profile.png";
 import mediumThumbnail from "../assets/images/medium_profile.png";
@@ -71,6 +72,7 @@ export const educationIcons = {
 
 export const workIcons = {
   qut: qutLogo,
+  raytracer: raytracerLogo,
   spingence: spingenceLogo,
   ksi: ksiLogo,
   jastudio: jaLogo,
